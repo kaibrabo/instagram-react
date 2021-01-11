@@ -1,12 +1,31 @@
 .post {
     width: 100%;
+    background-color: white;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 3px;
+    margin: 0 0 45px;
 }
 
-.post_img {
+.post__header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.post__avatar {
+    margin: 0 10px 0 0;
+}
+
+.post__img {
     width: 100%;
     object-fit: contain;
+    border-top: 1px solid rgb(219,219,219);
+    border-bottom: 1px solid rgb(219,219,219);
+
 }
 
 .post__text {
     font-weight: normal;
+    padding: 20px;
+
 }
