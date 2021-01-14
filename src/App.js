@@ -53,6 +53,8 @@ function App() {
 					displayName: username
 				})
 			}).catch((error) => alert(error.message));
+
+			setOpen(false);
 	}
 
 	const signIn = (e) => {
@@ -62,6 +64,7 @@ function App() {
 			.signInWithEmailAndPassword(email, password)
 			.catch((err) => alert(err.message));
 
+		setOpenSignIn(false);
 	}
 
 	useEffect(() => {
