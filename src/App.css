@@ -17,6 +17,11 @@
     align-content: center;
 }
 
+.app__signup {
+    display: flex;
+    flex-direction: column;
+}
+
 .app__headerImage {
     width: 103px;
     object-fit: contain;
