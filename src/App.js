@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		width: 400,
 		backgroundColor: theme.palette.background.paper,
 		border: "2px solid #000",
+		borderRadius: '3px',
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(2, 4, 3),
 	},
@@ -87,7 +88,6 @@ function App() {
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged((user) => {
 			if (user) {
-				console.log(user);
 				setUser(user);
 			} else {
 				setUser(null);
@@ -257,9 +257,12 @@ function App() {
 					return (
 						<Post
 							key={id}
+							postId={id}
 							username={post.username}
 							caption={post.caption}
 							imageUrl={post.imageUrl}
+							db={db}
+							user={user}
 						/>
 					);
 				})}

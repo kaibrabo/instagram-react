@@ -4,36 +4,55 @@
 	font-size: 14px;
 }
 
+input {
+	border: 0;
+}
+
+input:focus {
+	outline: none !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
 .App {
-  background-color: rgb(250, 250, 250);
-  height: 100vh;
+	background-color: rgb(250, 250, 250);
+	height: 100%;
 }
 
 .app__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 	background-color: rgba(255, 255, 255, 1);
 	height: 54px;
 	width: 100%;
 	border-bottom: 1px solid rgb(219, 219, 219);
 	display: flex;
 	align-content: center;
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 .app__signup {
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .header__image {
 	width: 103px;
 	object-fit: contain;
 	background-color: rgba(255, 255, 255, 1);
-  margin: 5px 0 0;
-  padding: 0 0 0 20px;
+	margin: 5px 0 0;
+	padding: 0 0 0 20px;
 }
 
 .app__headerImage {
-  width: 103px;
+	width: 103px;
 	object-fit: contain;
 	background-color: rgba(255, 255, 255, 1);
 }
@@ -48,20 +67,27 @@
 }
 
 .close-modal {
-  cursor: pointer;
+	cursor: pointer;
 }
 
-.signup, .imageUpload {
-  height: 200px;
-  width: 300px;
-  margin: 20px auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.signup,
+.imageUpload {
+	height: 200px;
+	width: 300px;
+	margin: 20px auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.signup > input:text,
+.imageUpload > input:text {
+  border: 1px solid rgb(219,219,219);
 }
 
 .posts {
 	margin: 0 auto;
 	max-width: 600px;
-	width: 100%;
+  width: 100%;
+  height: 100vh;
 }

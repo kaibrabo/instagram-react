@@ -70,7 +70,7 @@ function ImageUpload({username, setOpenImageUpload}) {
             <progress value={progress} max="100"/>
             <p>{progress}%</p>
             <input type="file" onChange={handleChange} />
-            <input type="text" placeholder="Write a caption..." onChange={e => setCaption(e.target.value)} />
+            <input type="text" placeholder="Write a caption..." onChange={e => setCaption(e.target.value)} style={{'border': '1px solid rgb(219,219,219)', 'border-radius': '3px', 'padding': '10px', 'width': '280px'}}/>
             <Button onClick={handleUpload}>Upload</Button>
         </div>
     )
