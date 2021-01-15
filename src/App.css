@@ -43,8 +43,7 @@
 }
 
 .header__links {
-	width: 103px;
-	padding: 0 40px 0 0;
+	width: 200px;
 	display: flex;
 }
 

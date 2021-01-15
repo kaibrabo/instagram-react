@@ -72,14 +72,16 @@ function App() {
 	};
 
 	useEffect(() => {
-		db.collection("posts").orderBy('timestamp', 'desc').onSnapshot((snap) => {
-			setPosts(
-				snap.docs.map((doc) => ({
-					id: doc.id,
-					post: doc.data(),
-				}))
-			);
-		});
+		db.collection("posts")
+			.orderBy("timestamp", "desc")
+			.onSnapshot((snap) => {
+				setPosts(
+					snap.docs.map((doc) => ({
+						id: doc.id,
+						post: doc.data(),
+					}))
+				);
+			});
 	}, [db, posts]);
 
 	useEffect(() => {
@@ -115,7 +117,10 @@ function App() {
 							<center>
 								<h3>Image Upload</h3>
 							</center>
-							<ImageUpload username={user.displayName} setOpenImageUpload={setOpenImageUpload}/>
+							<ImageUpload
+								username={user.displayName}
+								setOpenImageUpload={setOpenImageUpload}
+							/>
 						</form>
 					</div>
 				</Modal>
@@ -234,14 +239,14 @@ function App() {
 						</>
 					) : (
 						<>
-							<Button type="button" onClick={() => setOpen(true)}>
-								Sign up
-							</Button>
 							<Button
 								type="button"
 								onClick={() => setOpenSignIn(true)}
 							>
 								Sign in
+							</Button>
+							<Button type="button" onClick={() => setOpen(true)}>
+								Sign up
 							</Button>
 						</>
 					)}
