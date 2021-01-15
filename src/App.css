@@ -1,36 +1,68 @@
 * {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
 }
 
 .App {
-    background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
+  height: 100vh;
 }
 
 .app__header {
-    background-color: rgba(255, 255, 255, 1);
-    height: 54px;
-    padding: 0 20px;
-    border-bottom: 1px solid rgb(219, 219, 219);
-    display: flex;
-    align-content: center;
+	background-color: rgba(255, 255, 255, 1);
+	height: 54px;
+	width: 100%;
+	border-bottom: 1px solid rgb(219, 219, 219);
+	display: flex;
+	align-content: center;
+  justify-content: space-between;
 }
 
 .app__signup {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+  flex-direction: column;
+}
+
+.header__image {
+	width: 103px;
+	object-fit: contain;
+	background-color: rgba(255, 255, 255, 1);
+  margin: 5px 0 0;
+  padding: 0 0 0 20px;
 }
 
 .app__headerImage {
-    width: 103px;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 1);
-    margin: 5px 0 0;
+  width: 103px;
+	object-fit: contain;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.header__search {
+	width: 103px;
+}
+
+.header__links {
+	width: 103px;
+	padding: 0 40px 0 0;
+	display: flex;
+}
+
+.close-modal {
+  cursor: pointer;
+}
+
+.signup, .imageUpload {
+  height: 200px;
+  width: 300px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .posts {
-    margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
 }
