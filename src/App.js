@@ -125,8 +125,8 @@ function App() {
 					</div>
 				</Modal>
 			) : (
-				<></>
-			)}
+					<></>
+				)}
 
 			<Modal
 				open={open}
@@ -238,22 +238,22 @@ function App() {
 							</Button>
 						</>
 					) : (
-						<>
-							<Button
-								type="button"
-								onClick={() => setOpenSignIn(true)}
-							>
-								Sign in
+							<>
+								<Button
+									type="button"
+									onClick={() => setOpenSignIn(true)}
+								>
+									Sign in
 							</Button>
-							<Button type="button" onClick={() => setOpen(true)}>
-								Sign up
+								<Button type="button" onClick={() => setOpen(true)}>
+									Sign up
 							</Button>
-						</>
-					)}
+							</>
+						)}
 				</div>
 			</header>
 			<section className="posts">
-				{posts.map(({ id, post }) => {
+				{user ? (posts.map(({ id, post }) => {
 					return (
 						<Post
 							key={id}
@@ -265,7 +265,12 @@ function App() {
 							user={user}
 						/>
 					);
-				})}
+				})) : (
+						<div className="default-home">
+							<p>Please Sign Up or Sign In</p>
+						</div>
+					)
+				}
 			</section>
 		</div>
 	);

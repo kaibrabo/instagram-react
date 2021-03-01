@@ -66,6 +66,15 @@ button:focus {
 	display: flex;
 }
 
+.default-home {
+	height: 100vh;
+	text-align: center;
+}
+
+.default-home p {
+	padding: 20px 0;
+}
+
 .close-modal {
 	cursor: pointer;
 }
